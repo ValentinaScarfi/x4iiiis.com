@@ -17,9 +17,9 @@ a
 
 p
 {
-	background: #444;
-	color: white;
-	padding: 10px;
+	#background: #4444ab;
+	#color: white;
+	padding: 0px;
 }
 
 .secondary
@@ -85,7 +85,7 @@ nav ul li a
 
 .row
 {
-	
+
 }
 
 .col
@@ -100,7 +100,13 @@ nav ul li a
 }
 
 .test{
-	background: #999;
+	background: #3489db;
+	margin: 0;
+}
+
+.container
+{
+	#background: #5094ab;
 }
 
 footer
