@@ -8,6 +8,8 @@ body
 h1, h2, h3, h4, h5
 {
 	color: red;
+	padding-top: 0px;
+	margin-top: 0%;
 }
 
 a
@@ -108,6 +110,13 @@ nav ul li a
 {
 	#background: #5094ab;
 }
+
+.container h1, h2, h3, h4, h5, h6
+{
+	padding-top: 0px;
+	margin-top: 0px;
+}
+
 
 footer
 {
