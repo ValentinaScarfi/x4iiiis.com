@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 	
 	<head>
@@ -10,6 +10,18 @@
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Unity WebGL Player | Box Run</title>
+        <link rel="shortcut icon" href="TemplateData/favicon.ico">
+        <link rel="stylesheet" href="TemplateData/style.css">
+        <script src="TemplateData/UnityProgress.js"></script>
+        <script src="Build/UnityLoader.js"></script>
+        <script>
+            var gameInstance = UnityLoader.instantiate("gameContainer", "Build/BoxRun.json", { onProgress: UnityProgress });
+        </script>
 
 	</head>
 	
@@ -139,6 +151,16 @@
 		Now for some real work...
 		</p>
 		
+
+
+
+
+        <br /><br /><br /><br /><br /><br />
+        <p>
+            My first unity game! Aided by Brackeys on YouTube. It hasn't entirely exported properly but it's still nice that it's here and works!
+        </p>
+        
+        
 		</center>
 		
 		
@@ -148,6 +170,10 @@
 		
 		</div>
 		
+
+        <div class="webgl-content">
+            <div id="gameContainer" style="width: 960px; height: 600px"></div>
+        </div>
 		
 		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
