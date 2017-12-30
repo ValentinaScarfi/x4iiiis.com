@@ -55,6 +55,9 @@
 		
 		<div class="container">
 
+			<center>
+					<h1>NeuroSwitch</h1>
+			</center>
 		<p>
 		As an honours project is such a big deal, it deserved its own webpage rather than taking up a large portion of portfolio space. 
 		</p>
@@ -64,6 +67,10 @@
 		<a href="http://www.github.com/x4iiiis/HonoursProject" target="_blank">GitHub</a>,
 		and you can download my dissertation as a PDF
 		<a href="HonoursProject/Dissertation.pdf" download>here</a>.
+
+		<br>
+		(or <a href="https://github.com/x4iiiis/HonoursProject/raw/Macbook/Dissertation-Template/Dissertation.pdf">
+			here, direct from GitHub)</a>.
 		</p>
 
 		<p>
@@ -76,23 +83,88 @@
 		</p>
 
 		
-		<h2>THINGS THAT NEED DONE</h2>
+<br><br><br>
 
-		<ul>
-			<li>Honours Diary</li>
-			<li>Honours Literature Review - Change the images</li>
-			<li>Honours Game Foundation</li>
-			<li>Advanced Games Diary</li>
-			<li>Advanced Games Work</li>
-			<li>CPS CW2 - Sunday, 3 December 2017</li>
-			<br>
-			<li>MGS3 Renders and Uploads</li>
-			<li>Get this website to an acceptable standard with a CV and portfolio</li>
-			<li>Get Decy to host website for applying to jobs?</li>
-			<li>Get some cool stuff on YouTube to start getting out there</li>
-			<li>Make some games and get Sean/pals to come play them - Do surveys, maybe record for YouTube?</li>
+		<p>
+			NeuroSwitch was built using Visual Studio 2017, and was written in C++. For the visual aspects of the
+			project, <a href="https://www.sfml-dev.org" target="_blank">SFML</a> was imported. 
+		</p>
+		<p>
+			The textures used in game were
+			made by <a href="http://www.kenney.nl" target="_blank">Kenney Vleugels</a>, and can be found 
+			<a href="https://opengameart.org/content/boardgame-pack" target="_blank">here</a>. They come as part of a larger pack, but I only needed the playing
+			card textures for this project. 
+		</p>
 
-		</ul>
+		<br>
+		<p>
+			Here is an in-game screenshot from the 22nd of December, 2017. 
+		</p>
+		<p>
+			<img alt="In Game Screenshot" src="HonoursProject/Screenshots/22.12.17.png">
+		</p>
+
+		<br>
+		<p>
+			The next image shows console output from the end of a game, and the displaying of the scoreboard.
+		</p>
+		<p>
+			<img alt="Game Records Screenshot" src="HonoursProject/Screenshots/28.12.17-Passive,AggressiveAndRandomSchoolMe.png">
+		</p>
+		<p>
+			Notice the column on the right, showing the playstyle of each player, and in particular the hardcoded ones.
+
+			"Human" just means that a human user is in control of that player, and they have free reign on how they wish
+			to compete in the game. The automatic players are more interesting however.
+		</p>
+		<h4>Aggressive</h4>
+		<p>
+			The aggressive playstyle is coded so that the first thing the player does, if it is able to play, is to
+			check whether or not it has a black queen within its hand. If not, it will then check for a two, and failing 
+			that it will check for an eight. The aggressive playstyle will always play the cards that will negatively
+			affect the opposition first, before settling for the first playable card in its hand if it has none that will
+			do so.
+		</p>
+		<h4>Unaggressive</h4>
+		<p>
+			Unaggressive, as you might expect, does the exact opposite. Unaggressive attempts to avoid the power cards unless
+			they are the only playable cards within their hand. This tends to yield poor results. 
+		</p>
+		<h4>Random</h4>
+		<p>
+			The previous two playstyles will just play the first playable card in their hand (if their attempted conditions 
+			are not met). Random does not. While it <em>does</em> use the same code and pick the first legally playable card
+			in its hand, it gives the hand a good shuffle before doing so. Thus, the first playable card can vary. 
+		</p>
+
+		<br>
+		<p>
+			These are almost like dummy players. The goal of the project is to implement an Artificial Neural Network that will
+			learn how to play the game and improve over time, based on the results of a large quantity of games and generations.
+		</p>
+		<p>
+			For now, these allow me to play the game and test that there are no issues with the game. I need to know that the game
+			itself is working properly before I start to implement artificial intelligence, as finding a bug at a later stage would
+			render any data gathering that had been done to that point useless.
+		</p>
+		<p>
+			It can be fun to play against these automatic strategies too!
+		</p>
+
+		<br>
+
+		<p>
+			The results of each completed game are also being recorded in a text file. It shows much the same as the previous
+			screenshot, but with the inclusion of the current date and time for more informative data to look back on.
+		</p>
+		<p>
+			This can be seen in the following screenshot. 
+		</p>
+		<p>
+			<img alt="Console Screenshot" src="HonoursProject/Screenshots/28.12.17-KeepingGameRecords.png">
+		</p>
+
+		
 
 		</div>
 		
