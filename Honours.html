@@ -58,42 +58,34 @@
 			<center>
 					<h1>NeuroSwitch</h1>
 			</center>
-		<p>
-		As an honours project is such a big deal, it deserved its own webpage rather than taking up a large portion of portfolio space. 
-		</p>
+
+		<!-- Perhaps I could form a type of blog thing from my Honours Diary once I get it under control -->
 
 		<p>
-		The source code for the project can be found on my 
-		<a href="http://www.github.com/x4iiiis/HonoursProject" target="_blank">GitHub</a>,
-		and you can download my dissertation as a PDF
-		<a href="HonoursProject/Dissertation.pdf" download>here</a>.
-
-		<br>
-		(or <a href="https://github.com/x4iiiis/HonoursProject/raw/Macbook/Dissertation-Template/Dissertation.pdf">
-			here, direct from GitHub)</a>.
+			NeuroSwitch was built using Visual Studio 2017, and was written in C++. For the visual aspects 
+			of the project, <a href="https://www.sfml-dev.org" target="_blank">SFML</a> was imported. 
 		</p>
-
+		<p>
+			The project is open source; The code can be checked out over on 
+			<a href="http://www.github.com/x4iiiis/HonoursProject" target="_blank">my GitHub</a>,
+			and you can download my dissertation as a PDF
+			<!-- <a href="HonoursProject/Dissertation.pdf" download>here</a>. -->
+			<a href="https://github.com/x4iiiis/HonoursProject/raw/Macbook/Dissertation-Template/Dissertation.pdf">
+				here</a>.
+		</p>
 		<p>
 			There will also be more documentation over on 
-			<a href="http://www.youtube.com/user/x4iiiis" target="_blank">my YouTube</a>.
+			<a href="https://www.youtube.com/playlist?list=PLy7dHoWSR1i5sJ1h83-yW3nFbFgPIK_8x"
+			target="_blank">my YouTube channel</a>.
+			<!-- <a href="http://www.youtube.com/user/x4iiiis" target="_blank">my YouTube channel</a>. -->
 		</p>
 
-		<p>
-			Perhaps I could form a type of blog thing from my Honours Diary once I get it under control 
-		</p>
-
-		
-<br><br><br>
-
-		<p>
-			NeuroSwitch was built using Visual Studio 2017, and was written in C++. For the visual aspects of the
-			project, <a href="https://www.sfml-dev.org" target="_blank">SFML</a> was imported. 
-		</p>
+		<br>
 		<p>
 			The textures used in game were
 			made by <a href="http://www.kenney.nl" target="_blank">Kenney Vleugels</a>, and can be found 
-			<a href="https://opengameart.org/content/boardgame-pack" target="_blank">here</a>. They come as part of a larger pack, but I only needed the playing
-			card textures for this project. 
+			<a href="https://opengameart.org/content/boardgame-pack" target="_blank">here</a>. They come as 
+			part of a larger pack, but only the playing card textures were necessary for this project. 
 		</p>
 
 		<br>
@@ -106,46 +98,52 @@
 
 		<br>
 		<p>
-			The next image shows console output from the end of a game, and the displaying of the scoreboard.
+			The next image shows console output from the end of a game, and the displaying of the 
+			scoreboard.
 		</p>
 		<p>
 			<img alt="Game Records Screenshot" src="HonoursProject/Screenshots/28.12.17-Passive,AggressiveAndRandomSchoolMe.png">
 		</p>
 		<p>
-			Notice the column on the right, showing the playstyle of each player, and in particular the hardcoded ones.
+			Notice the column on the right, showing the playstyle of each player, and in particular the 
+			hardcoded ones.
 
-			"Human" just means that a human user is in control of that player, and they have free reign on how they wish
-			to compete in the game. The automatic players are more interesting however.
+			"Human" just means that a human user is in control of that player, and they have free reign on 
+			how they wish to compete in the game. The automatic players are more interesting however.
 		</p>
 		<h4>Aggressive</h4>
 		<p>
-			The aggressive playstyle is coded so that the first thing the player does, if it is able to play, is to
-			check whether or not it has a black queen within its hand. If not, it will then check for a two, and failing 
-			that it will check for an eight. The aggressive playstyle will always play the cards that will negatively
-			affect the opposition first, before settling for the first playable card in its hand if it has none that will
-			do so.
+			The aggressive playstyle is coded so that the first thing the player does, if it is able to play, 
+			is to check whether or not it has a black queen within its hand. If not, it will then check for 
+			a two, and failing that it will check for an eight. The aggressive playstyle will always play 
+			the cards that will negatively affect the opposition first, before settling for the first 
+			playable card in its hand if it has none that will do so.
 		</p>
 		<h4>Unaggressive</h4>
 		<p>
-			Unaggressive, as you might expect, does the exact opposite. Unaggressive attempts to avoid the power cards unless
-			they are the only playable cards within their hand. This tends to yield poor results. 
+			Unaggressive, as you might expect, does the exact opposite. Unaggressive attempts to avoid the 
+			power cards unless they are the only playable cards within their hand. This tends to yield poor 
+			results. 
 		</p>
 		<h4>Random</h4>
 		<p>
-			The previous two playstyles will just play the first playable card in their hand (if their attempted conditions 
-			are not met). Random does not. While it <em>does</em> use the same code and pick the first legally playable card
-			in its hand, it gives the hand a good shuffle before doing so. Thus, the first playable card can vary. 
+			The previous two playstyles will just play the first playable card in their hand (if their 
+			attempted conditions are not met). Random does not. While it <em>does</em> use the same code 
+			and pick the first legally playable card in its hand, it gives the hand a good shuffle before 
+			doing so. Thus, the first playable card can vary. 
 		</p>
 
 		<br>
 		<p>
-			These are almost like dummy players. The goal of the project is to implement an Artificial Neural Network that will
-			learn how to play the game and improve over time, based on the results of a large quantity of games and generations.
+			These are almost like dummy players. The goal of the project is to implement an Artificial 
+			Neural Network that will learn how to play the game and improve over time, based on the results 
+			of a large quantity of games and generations.
 		</p>
 		<p>
-			For now, these allow me to play the game and test that there are no issues with the game. I need to know that the game
-			itself is working properly before I start to implement artificial intelligence, as finding a bug at a later stage would
-			render any data gathering that had been done to that point useless.
+			For now, these allow me to play the game and test that there are no issues with the game. I 
+			need to know that the game itself is working properly before I start to implement artificial 
+			intelligence, as finding a bug at a later stage would render any data gathering that had been 
+			done to that point useless.
 		</p>
 		<p>
 			It can be fun to play against these automatic strategies too!
@@ -154,8 +152,9 @@
 		<br>
 
 		<p>
-			The results of each completed game are also being recorded in a text file. It shows much the same as the previous
-			screenshot, but with the inclusion of the current date and time for more informative data to look back on.
+			The results of each completed game are also being recorded in a text file. It shows much the 
+			same as the previous screenshot, but with the inclusion of the current date and time for more 
+			informative data to look back on.
 		</p>
 		<p>
 			This can be seen in the following screenshot. 
