@@ -11,9 +11,38 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+		<!-- Automatic Scrolling Function -->
+		<script src="autoScrollTo.js"></script>
+
+
+		<!--Table Formatting-->
+		<style>
+				table, th, td 
+				{
+					border: 1px solid black;
+					border-collapse: collapse;
+				}
+				table
+				{
+					table-layout: fixed;
+				}
+				th 
+				{
+					padding: 1px;
+					text-align: center;
+				}
+				th * { display: inline; }
+				td 
+				{ 
+					width: 33%;
+					padding : 1px; 
+					text-align: center; 
+				}
+				td * { display: inline; }
+			</style>
 	</head>
 	
-	<body>
+	<body onLoad="javascript:PRConverter()">
 	
 	
 		<header class="navbar-inverse navbar-fixed-top" role="banner">
@@ -70,6 +99,11 @@
 		</p><br>
 		
 		
+		<input type="button" onclick="return false;" onmousedown="autoScrollTo('FitnessAndBodybuilding');" value="View PRs" />
+
+		
+		
+
 		<h4>What's an 'x 4 i i i i s?'</h4>
 		
 		<p>
@@ -228,6 +262,7 @@
 		</p><br>
 		
 
+		<div id="FitnessAndBodybuilding">
 		<h4>Fitness and Bodybuilding</h4>
 
 		<p>
@@ -252,18 +287,33 @@
 			<li>Visible abs</li>
 		</ul>
 
-		<strong>Current routine:</strong><br>
-		I'm currently using the Project Mass program by Dymatize.<br><br>
+		<br>
 
-		I use the mobile app to check what I'm doing in the gym each day quickly and easily. The app can be found on the 
+		<strong>Personal Records:</strong>
+		<br><br>
+		<table style="width:100%"> 
+				<tr>
+				  	<th>Bench Press</th>
+				  	<th>Overhead Press</th>
+				  	<th>Squat</th> 
+				  	<th>Deadlift</th>
+				</tr>
+				<tr>
+				  	<td id="Bench">65 kg</td>
+				  	<td id="OHP">50 kg</td>
+				  	<td id="Squat">105 kg</td>
+				  	<td id="Dead">130 kg</td>
+				</tr>
+				<tr>
+					<td id="BenchLBS">^ to nearest pound</td>
+					<td id="OHPLBS">^ to nearest pound</td>
+					<td id="SquatLBS">^ to nearest pound</td>
+					<td id="DeadLBS">^ to nearest pound</td>
+				</tr>
+			  </table>
+			  <small><i>Based in kilograms; Conversions rounded to nearest pound</i></small>
 
-		<a href="https://itunes.apple.com/us/app/project-mass-by-dymatize/id1185384922?mt=8" target="_blank">Apple App Store</a>, and on
-
-		<a href="https://play.google.com/store/apps/details?id=com.bodybuilding.dymatize.projectmass&hl=en_GB" target="_blank">Google Play</a>.<br><br>
-
-		If you're just on a computer, you can check it out on <a href="https://www.bodybuilding.com/fun/jake-wilson-project-mass-trainer.html" target="_blank">bodybuilding.com</a>.<br><br>
-
-		I'm just going to point out that these were free when I wrote that -_- <br><br>
+		<br><br>
 
 		<strong>Do you track macros?</strong><br>
 		No.<br><br>
@@ -272,6 +322,7 @@
 		each day. Aiming to eat clean and have a keep the cheat meals to a minimum (maybe once a week), I make an effort to totally avoid chocolate and drink only water most of the time. I only 
 		consume alcohol occasionally - usually at social events. I avoid it because I don't like the negative after-effects it has on my body. 
 		</p>
+		</div>
 
 		<h2>Tattoo Section?</h2>
 		<p>
@@ -295,6 +346,7 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	
+
 		<!--for age counter -->
 		<script type="text/javascript">
 			var birth = new Date('1995-01-03');
@@ -304,6 +356,33 @@
 			var age = new Date(difference).getFullYear() - 1970
 			var span = document.getElementById('age');
 			span.innerHTML = age;
+		</script>
+
+
+		<!-- kg to lbs conversion -->
+		<script>
+			function PRConverter() 
+			{
+				document.getElementById("BenchLBS").innerHTML =
+				Math.round(document.getElementById("Bench").innerHTML.split(" kg").join('') * 2.2046226218) + " lbs";  
+				
+				
+				document.getElementById("OHPLBS").innerHTML =
+				Math.round(document.getElementById("OHP").innerHTML.split(" kg").join('') * 2.2046226218) + " lbs"; 
+
+				document.getElementById("SquatLBS").innerHTML =
+				Math.round(document.getElementById("Squat").innerHTML.split(" kg").join('') * 2.2046226218) + " lbs";  
+  
+  
+  				document.getElementById("DeadLBS").innerHTML =
+  				Math.round(document.getElementById("Dead").innerHTML.split(" kg").join('') * 2.2046226218) + " lbs"; 
+				
+				//(document.getElementById("Bench").innerHTML * 2.2046226218);
+
+
+
+				//document.getElementById("outputPounds").innerHTML=valNum*2.2046226218;
+			}
 		</script>
 
 	</body>
