@@ -266,10 +266,10 @@
 		<h4>Fitness and Bodybuilding</h4>
 
 		<strong>Height:</strong><br>
-		5'6<br><br>
+		<p>5'6</p>
 
 		<strong>Weight:</strong><br>
-		75kg<br><br>
+		<p id="CurrentWeight">75kg</p>>
 
 		<strong>Current Goals:</strong>
 		<ul>
@@ -364,9 +364,11 @@
 		<script>
 			function PRConverter() 
 			{
+				document.getElementById("CurrentWeight").innerHTML += " / " +
+				Math.round(document.getElementById("CurrentWeight").innerHTML.split("kg").join('') * 2.2046226218) + "lbs";  
+				
 				document.getElementById("BenchLBS").innerHTML =
 				Math.round(document.getElementById("Bench").innerHTML.split(" kg").join('') * 2.2046226218) + " lbs";  
-				
 				
 				document.getElementById("OHPLBS").innerHTML =
 				Math.round(document.getElementById("OHP").innerHTML.split(" kg").join('') * 2.2046226218) + " lbs"; 
