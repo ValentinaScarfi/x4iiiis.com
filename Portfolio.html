@@ -11,6 +11,10 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+		<!-- Automatic Scrolling Function -->
+		<script src="autoScrollTo.js"></script>
+
+
 		<!--Table Formatting-->
 		<style>
 			table, th, td 
@@ -85,10 +89,71 @@
 		
 		<center><h2>Welcome to the x4iiiis Project Hall of Fame</h2></center>
 
+
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+				  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+				</ol>
+			  
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+				  <div class="item active">
+					<a href="#" onclick="return false;" onmousedown="autoScrollTo('GlobalGameJam');"><img src="images/portfolio/whereswhaley.png" alt="..."></a>
+					<div class="carousel-caption">
+					  Where's Whaley?
+					</div>
+				  </div>
+				  <div class="item">
+					<a href="#" onclick="return false;" onmousedown="autoScrollTo('SkyWars');"><img src="images/portfolio/SkyWars/SkyWars2.png" alt="...">
+					<div class="carousel-caption">
+					  Sky Wars
+					</div>
+				  </div>
+				  <div class="item">
+						<a href="Honours.html"><img src="images/honoursproject/screenshots/22.12.17.png" alt="..."></a>
+					<div class="carousel-caption">
+					  NeuroSwitch
+					</div>
+				  </div>
+				</div>
+			  
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				  <span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				  <span class="sr-only">Next</span>
+				</a>
+			  </div>
+
+			  <br><br><br>
+	
+		<p><center>
+			This place is pretty busy, but these buttons can help you find what you're looking for:
+		</p></center>
+
+		<table style="width:100%;border:none">
+			<tr>
+				<th style="border:none"><input type="button" onclick="autoScrollTo('GlobalGameJam');" value="Global Game Jam" style="width:100%"/></th>
+				<th style="border:none"><input type="button" onclick="autoScrollTo('LudumDare');" value="Ludum Dare" style="width:100%"/></th>
+				<th style="border:none"><input type="button" onclick="autoScrollTo('SkyWars');" value="Sky Wars" style="width:100%"/></th>
+				<th style="border:none"><input type="button" onclick="autoScrollTo('UniversityWork');" value="University Work" style="width:100%"/></th>
+				<th style="border:none"><input type="button" onclick="autoScrollTo('PersonalProjects');" value="Personal Projects" style="width:100%"/></th>
+			</tr>
+		</table>
+
+
 		<br><br>
 
+		<div id="GlobalGameJam">
 	<center>
-		<h2>Global Game Jam! (Section)</h2>
+		<h2>Global Game Jam</h2>
 		<h4><a href="https://globalgamejam.org/users/x4iiiis/" target="_blank">My Profile</a></h4>
 		<table style="width:100%">
 			<tr>
@@ -112,13 +177,14 @@
 			  <td><a href="" target="_blank"></a></td>
 			</tr>
 		  </table>
-
 	</center>
+		</div>
 
 			<br><br>
 
+			<div id="LudumDare">
 	<center>
-		<h2>Ludum Dare! (Section)</h2>
+		<h2>Ludum Dare</h2>
 		<h4><a href="https://ldjam.com/users/x4iiiis/" target="_blank">My Profile</a></h4>
 		
 		<table style="width:100%"> 
@@ -147,36 +213,42 @@
 			  <td><a href="" target="_blank"></a></td>
 			</tr>
 		  </table>
-
-
-	</center>
+		</center>
+		</div>
 
 		<br><br>
-		<h3>Sky Wars!</h3>
+
+		<div id="UniversityWork">
+		<div id="SkyWars">
+		<h3>Sky Wars</h3>
 		<p>
 			Wee para about what Sky Wars is and why it was created (design patterns - factory etc)
 		</p>
-		<img alt="SkyWars1" src="Portfolio/SkyWars/SkyWars1.png" style="width:50%;height:50%;">
+		<img alt="SkyWars1" src="images/Portfolio/SkyWars/SkyWars1.png" style="width:50%;height:50%;">
 		
 		<p>
 			Should <em>probably</em> change the Sky Captain sprite to something a little less copyrighted...
 		</p>
 		
-		<img alt="SkyWars2" src="Portfolio/SkyWars/SkyWars2.png" style="width:50%;height:50%;">
+		<img alt="SkyWars2" src="images/Portfolio/SkyWars/SkyWars2.png" style="width:50%;height:50%;">
 
 		<p>
 			Maybe a wee screenshot showing how many classes are involved, possibly code snippets, YouTube video?
 		</p>
-
+		</div>
+		</div>
 
 		<br><br>
+
+
+		<div id="PersonalProjects">
 		<h3>Box Run!</h3>
 		<p>
 			I made box run when I was bored followed a YouTube tutorial and this isn't staying here it's
 			just a placeholder but fuck it yolo 
 		</p>
-		<img alt="BoxRun" src="Portfolio/Unity/BoxRun.png" style="width:50%;height:50%;">
-
+		<img alt="BoxRun" src="images/Portfolio/Unity/BoxRun.png" style="width:50%;height:50%;">
+		</div>
 
 
 
@@ -254,7 +326,7 @@
 
 
 		<h3>Idea: Make a game like this!</h3>
-		<img alt="Sonic" src="Portfolio/Sonic.jpg" stlye="width:50%;height:50%;">
+		<img alt="Sonic" src="images/Portfolio/Sonic.jpg" stlye="width:50%;height:50%;">
 		
 		</div>
 		

@@ -123,3 +123,7 @@ footer
 	clear: both;
 }
 
+.table--unbordered 
+{
+	border: none;
+}
