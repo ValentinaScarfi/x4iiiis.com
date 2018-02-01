@@ -39,12 +39,37 @@
 				text-align: center; 
 			}
 			td * { display: inline; }
+
+			.float-img-left
+			{
+				float:left;
+				clear:left;
+				margin-right:10px;
+				margin-bottom:5px;
+				margin-top:5px;
+				padding:2px;
+			}
+			.float-img-right
+			{
+				float:right;
+				clear:right;
+				margin-left:10px;
+				margin-bottom:5px;
+				margin-top:5px;
+				padding:2px;
+			}
+
+			.clearfix
+			{
+				overflow:auto;
+			}
 		</style>
 
 	</head>
 	
 	<body>
 	
+		<script src="PortfolioAligner.js"></script>
 	
 		<header class="navbar-inverse navbar-fixed-top" role="banner">
 			<div class="container-fluid">
@@ -147,13 +172,21 @@
 				</a>
 			  </div>
 
-			  <br><br><br>
+			  <br><br>
 	
 
 		<div id="GlobalGameJam">
 	<center>
 		<h2>Global Game Jam</h2>
 		<h4><a href="https://globalgamejam.org/users/x4iiiis/" target="_blank">My Profile</a></h4>
+	</center>
+
+	<br>
+	<p>
+		Wee para about What GGJ is etc
+	</p>
+
+		<center>
 		<table style="width:100%">
 			<tr>
 			  <th>Event</th>
@@ -177,15 +210,31 @@
 			</tr>
 		  </table>
 	</center>
-		</div>
 
-			<br><br>
+		</div>
+		<br>
+
+		<div id="Where's Whaley?" class="clearfix">
+				<img alt="Where's Whaley?" src="images/Portfolio/WheresWhaley.png" style="width:50%;height:50%;" class="float-img-right">
+				
+				<h3><center>Where's Whaley?</center></h3>
+				<p>
+					Wee para about Where's Whaley 
+				</p>
+				</div>
+
+			<br>
 
 			<div id="LudumDare">
 	<center>
 		<h2>Ludum Dare</h2>
 		<h4><a href="https://ldjam.com/users/x4iiiis/" target="_blank">My Profile</a></h4>
-		
+	</center>
+	<br>
+	<p>
+		What the fuck is Ludum Dare?
+	</p>
+		<center>
 		<table style="width:100%"> 
 			<tr>
 			  <th>Event</th>
@@ -215,46 +264,62 @@
 		</center>
 		</div>
 
-		<br><br>
+		<br>
 
 		<div id="UniversityWork">
-		<div id="SkyWars">
-		<h3>Sky Wars</h3>
+		<h2><center>University Work</center></h2>
+		<div id="SkyWars" class="clearfix">
+		<img alt="SkyWars1" src="images/Portfolio/SkyWars/SkyWars1.png" style="width:50%;height:50%;" class="float-img-left">
+		
+		<h3><center>Sky Wars</center></h3>
 		<p>
 			Wee para about what Sky Wars is and why it was created (design patterns - factory etc)
 		</p>
-		<img alt="SkyWars1" src="images/Portfolio/SkyWars/SkyWars1.png" style="width:50%;height:50%;">
-		
 		<p>
 			Should <em>probably</em> change the Sky Captain sprite to something a little less copyrighted...
 		</p>
 		
-		<img alt="SkyWars2" src="images/Portfolio/SkyWars/SkyWars2.png" style="width:50%;height:50%;">
+		<img alt="SkyWars2" src="images/Portfolio/SkyWars/SkyWars2.png" style="width:50%;height:50%;" class="float-img-left">
 
 		<p>
 			Maybe a wee screenshot showing how many classes are involved, possibly code snippets, YouTube video?
 		</p>
+
+		<p>
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME DELETE ME 
+				
+		</p>
 		</div>
 		</div>
 
-		<br><br>
+		<br>
 
 
 		<div id="PersonalProjects">
-		<h3>Box Run!</h3>
+		<h2><center>Personal Projects</center></h2>
+		<div id="Box Run" class="clearfix">
+		<img alt="BoxRun" src="images/Portfolio/Unity/BoxRun.png" style="width:50%;height:50%;" class="float-img-right">
+		<h3><center>Box Run!</center></h3>
 		<p>
-			I made box run when I was bored followed a YouTube tutorial and this isn't staying here it's
-			just a placeholder but fuck it yolo 
+				I made box run when I was bored followed a YouTube tutorial and this isn't staying here it's
+				just a placeholder but fuck it yolo 
 		</p>
-		<img alt="BoxRun" src="images/Portfolio/Unity/BoxRun.png" style="width:50%;height:50%;">
+	</div>
 		</div>
 
-
-
-
-
-
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 		<p>
 			If you could somehow manage to get the Chess thing from first year up and running that'd be sick,
@@ -325,7 +390,7 @@
 
 
 		<h3>Idea: Make a game like this!</h3>
-		<img alt="Sonic" src="images/Portfolio/Sonic.jpg" stlye="width:50%;height:50%;">
+		<img alt="Sonic" src="images/Portfolio/Sonic.jpg" stlye="width:50%;height:50%;" class="float-img-left">
 		
 		</div>
 		
