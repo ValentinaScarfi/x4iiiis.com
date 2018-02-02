@@ -13,6 +13,56 @@
 
 		<!-- Automatic Scrolling Function -->
 		<script src="autoScrollTo.js"></script>
+
+		<!--Table Formatting-->
+		<style>
+				table, th, td 
+				{
+					border: 1px solid black;
+					border-collapse: collapse;
+				}
+				table
+				{
+					table-layout: fixed;
+				}
+				th 
+				{
+					padding: 1px;
+					text-align: center;
+				}
+				th * { display: inline; }
+				td 
+				{ 
+					width: 33%;
+					padding : 1px; 
+					text-align: center; 
+				}
+				td * { display: inline; }
+	
+				.float-img-left
+				{
+					float:left;
+					clear:left;
+					margin-right:10px;
+					margin-bottom:5px;
+					margin-top:5px;
+					padding:2px;
+				}
+				.float-img-right
+				{
+					float:right;
+					clear:right;
+					margin-left:10px;
+					margin-bottom:5px;
+					margin-top:5px;
+					padding:2px;
+				}
+	
+				.clearfix
+				{
+					overflow:auto;
+				}
+		</style>
 	</head>
 	
 	<body>
@@ -86,39 +136,178 @@
 
 		<br><br>
 
+		<div class="clearfix">
 		<center>
 				<h1>NeuroSwitch</h1>
 		</center>
 
 		<p>
-			NeuroSwitch was built using Visual Studio 2017, and written in C++. For the visual aspects 
-			of the project, <a href="https://www.sfml-dev.org" target="_blank">SFML</a> was imported. 
+			<center>NeuroSwitch was built using Visual Studio 2017, and written in C++.</center>
 		</p>
+		<p><center>
+			For the visual aspects of the project, <a href="https://www.sfml-dev.org" target="_blank">SFML</a> was imported. 
+		</center></p>
+
+		<br>
 		<p>
 			The textures used in game were
 			made by <a href="http://www.kenney.nl" target="_blank">Kenney Vleugels</a>, and can be found 
-			<a href="https://opengameart.org/content/boardgame-pack" target="_blank">here</a>. They come as 
-			part of a larger pack, but only the playing card textures were necessary for this project. 
+			<a href="https://opengameart.org/content/boardgame-pack" target="_blank">here</a>. 
+		</p>
+		<p> They come as part of a larger pack, but only the playing card textures were necessary for 
+			this project. 
 		</p>
 
 		<br>
 		<p>
-			Here is an in-game screenshot from the 22nd of December, 2017. 
-		</p>
-		<p>
-			<img alt="In Game Screenshot" src="images/HonoursProject/Screenshots/22.12.17.png">
+			Here is an in-game NeuroSwitch screenshot from the 22nd of December, 2017. 
 		</p>
 
+		<img alt="In Game Screenshot" src="images/HonoursProject/Screenshots/22.12.17.png" style="width:50%;height:50%;" class="float-img-left">
+
+		<p>
+			<center>
+				<h5>Switch</h5>
+				Before we delve into the project, I should explain the rules of Switch.
+			</center>
+		</p>
+		<p>
+			Switch is a game that has a plethora of variants and probably has a few different
+			aliases too. However, 'Switch' was the name my friends and I used when we'd play the game
+			throughout our high-school years, and these are the rules with which we played:
+		</p>
+		<p>
+			Each player is dealt a set amount of cards (usually around 7, but can vary dependant on the
+			number of players), and the player to the left of the dealer starts after the card on the top 
+			of the pack has been turned over.
+		</p>
+		<p>
+			The player must now either match the suit of the upturned card, or its type.
+		</p> 
+		<p>
+			If the cards in their hand do not fit the criteria, then the player must pick up from the top of
+			the pack, and the player to their left begins their turn.
+		</p>
+		<p>
+			The aim of the game is to play all of your cards and get "out." 
+		</p>
+		<p>
+			The game can continue after someone has won; We used to play until last place had been decided
+			and the loser ridiculed.
+		</p>
+		<p>
+			As you might expect, it isn't quite as simple as that though. 
+		</p>
+		<p>
+			Certain cards have rules attached to them. There are varying permutations of these rules,
+			but I'm going to use the rules I'm accustomed to. 
+		</p>
+		
 		<br>
+		<center>
+				<table style="width:100%"> 
+					<tr>
+					  <th>Card</th>
+					  <th>Rule</th>
+					  <th>Exception</th>
+					</tr>
+					<tr style="background-color:salmon">
+						<td>[Runs]</td>
+						<td>If the player has several of the same type, they are permitted to play
+							both together. The card that matches the most recently played card must be
+							played first though.
+						</td>
+						<td></td>
+					</tr>
+					<tr style="background-color:chartreuse">
+					  <td>2</td>
+					  <td>Next player picks up 2 cards</td>
+					  <td style="background-color:salmon">If the player has a 2 (or several 2s) of their own, resulting in the penalty
+						  being extended for the next player
+					  </td>
+					</tr>
+					<tr style="background-color:salmon">
+						<td>7</td>
+						<td>Allows the player to play all of the cards in their hand that match the suit 
+							of the 7 in question. May also be topped off with a run of matching types.
+						</td>
+						<td></td>
+					</tr>
+					<tr style="background-color:chartreuse">
+					  <td>8</td>
+					  <td>Next player misses a turn</td>
+					  <td style="background-color:salmon">If the player has an 8 (or several 8s) of their own, resulting in the penalty
+						  being extended for the next player
+					  </td>
+					</tr>
+					<tr style="background-color:chartreuse">
+					  <td>Black Queen</td>
+					  <td>Next player picks up 5 cards</td>
+					  <td style="background-color:salmon">If the player has a black queen of their own, resulting in the penalty being 
+						  doubled for the next player.
+					</td>
+					</tr>
+					<tr style="background-color:salmon">
+						<td>Red Queen</td>
+						<td>A red queen can cancel out the effects of a single black queen,
+							and two can counteract two black queens.
+						</td>
+						<td></td>
+					</tr>
+					<tr style="background-color:salmon">
+						<td>Ace</td>
+						<td>Player gets to nominate a suit for the next card to be played</td>
+						<td>The next player may override this with an ace (or aces) of their own</td>
+					</tr>
+					<tr style="background-color:chartreuse">
+						<td>Jack</td>
+						<td>The direction of play is reversed</td>
+						<td></td>
+					</tr>
+				  </table>
+				</center>
+
+				<br>
+		</div>
+<center>
+		<div style="background-color:blueviolet; max-width:200px">
+			
+				<p style="color:aliceblue">Key:</p>
+				<p style="color:chartreuse">In NeuroSwitch</p>
+				<p style="color:salmon">Not in NeuroSwitch</p>
+		</div>
+</center>
+		<br>
+
+		<p>
+			<ul>
+				<li>All rules that enforce a penalty on the next player are not available to be
+					countered in NeuroSwitch.
+				</li>
+				<li>
+					Runs of any kind are not possible in NeuroSwitch; Cards can only be played one-by-one.
+				</li>
+				<li>
+					There is no function provided for players to nominate suits upon playing aces.
+				</li>
+			</ul>
+		</p>
+		<br>
+		
+		<div class="clearfix">
+		<p>
+			<img alt="Game Records Screenshot" src="images/HonoursProject/Screenshots/28.12.17-Passive,AggressiveAndRandomSchoolMe.png" style="width:50%;height:50%;" class="float-img-left">
+		</p>
+
+		<center><h5>NeuroSwitch</h5></center>
+		
 		<p>
 			The next image shows console output from the end of a game, and the displaying of the 
 			scoreboard.
 		</p>
+		
 		<p>
-			<img alt="Game Records Screenshot" src="images/HonoursProject/Screenshots/28.12.17-Passive,AggressiveAndRandomSchoolMe.png">
-		</p>
-		<p>
-			Notice the column on the right, showing the playstyle of each player, and in particular the 
+			Notice the column on the right showing the playstyle of each player, and in particular the 
 			hardcoded ones.
 
 			"Human" just means that a human user is in control of that player, and they have free reign on 
@@ -161,6 +350,7 @@
 		<p>
 			It can be fun to play against these automatic strategies too!
 		</p>
+		</div>
 
 		<br>
 
@@ -173,18 +363,27 @@
 			This can be seen in the following screenshot. 
 		</p>
 		<p>
-			<img alt="Console Screenshot" src="images/HonoursProject/Screenshots/28.12.17-KeepingGameRecords.png">
+			<center><img alt="Console Screenshot" src="images/HonoursProject/Screenshots/28.12.17-KeepingGameRecords.png" style="width:75%;height:75%;"></center>
 		</p>
 
 
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<div id ="Playlist" class="contentbox">
-
+		<center><h3>NeuroSwitch YouTube Playlist</h3></center>
 		<!-- Embedding the playlist -->
-		<center><iframe width="853" height="480" src="https://www.youtube.com/embed/videoseries?list=PLy7dHoWSR1i5sJ1h83-yW3nFbFgPIK_8x" frameborder="0" allowfullscreen></iframe></center>
-		
+		<center><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLy7dHoWSR1i5sJ1h83-yW3nFbFgPIK_8x" frameborder="0" allowfullscreen></iframe></center>
 		</div>
-		
 		
 		
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

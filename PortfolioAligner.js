@@ -5,11 +5,7 @@ var temp = "float-img-left";
     
 for(var i = 0; i < alldivs.length; i++)
 {
-    console.log("container.length: " + container.length);
-
     var divImages = alldivs[i].getElementsByTagName("img");
-
-    console.log("divImages.length: " + divImages.length);
 
     if(divImages.length != 0 && alldivs[i].className != "Section")
     {
