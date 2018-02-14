@@ -65,7 +65,17 @@
 	
 		
 		<div class="container">
-    
+		<br>
+		
+		<center>
+				<h1>Florida</h1>
+				<H2 id="essay" style="color:red"></H2>
+				<br>
+				<h1>DISSERTATION</h1>
+				<h2 id="diss" style="color:red"></h2>
+			</center>
+
+			<br><br><br>
 <h1>THINGS THAT NEED DONE</h1>
 
 		<ul>
@@ -81,8 +91,9 @@
 			<li>Make some games and get Sean/pals to come play them - Do surveys, maybe record for YouTube?</li>
     </ul>
     
-    <br><br><br><br><br>
 
+		<br><br><br><br><br>
+		
 
 		<center>Fancy sitting back and watching my entire MGS1 walkthrough? You're in luck!<br>
 		I've embedded the playlist here, so all you have to do is click play below. Enjoy! <3<br><br>
@@ -90,7 +101,11 @@
 		<center><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLy7dHoWSR1i60hiyvESCuiN-sQx_wUxfi" frameborder="0" allowfullscreen></iframe></center>
 
 
-		
+		<div id="FPL">
+			<p>
+				[Insert Fantasy Football league link here]
+			</p>
+		</div>
 		
 		</div>
 		
@@ -99,6 +114,68 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<!-- Deadline Countdowns -->
+		<script>
+				// Set the date we're counting down to
+				var countDownDate = new Date("May 31, 2018 00:00:00").getTime();
+				
+				// Update the count down every 1 second
+				var x = setInterval(function() {
+				
+						// Get todays date and time
+						var now = new Date().getTime();
+						
+						// Find the distance between now an the count down date
+						var distance = countDownDate - now;
+						
+						// Time calculations for days, hours, minutes and seconds
+						var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+						var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+						var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+						var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+						
+						// Output the result in an element with id="demo"
+						document.getElementById("essay").innerHTML = days + "d " + hours + "h "
+						+ minutes + "m " + seconds + "s ";
+						
+						// If the count down is over, write some text 
+						if (distance < 0) {
+								clearInterval(x);
+								document.getElementById("essay").innerHTML = "EXPIRED";
+						}
+				}, 1000);
+				</script>
+				<script>
+						// Set the date we're counting down to
+						var countDownDate2 = new Date("Apr 11, 2018 17:00:00").getTime();
+						
+						// Update the count down every 1 second
+						var x2 = setInterval(function() {
+						
+								// Get todays date and time
+								var now2 = new Date().getTime();
+								
+								// Find the distance between now an the count down date
+								var distance2 = countDownDate2 - now2;
+								
+								// Time calculations for days, hours, minutes and seconds
+								var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+								var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+								var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+								var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+								
+								// Output the result in an element with id="demo"
+								document.getElementById("diss").innerHTML = days2 + "d " + hours2 + "h "
+								+ minutes2 + "m " + seconds2 + "s ";
+								
+								// If the count down is over, write some text 
+								if (distance2 < 0) {
+										clearInterval(x2);
+										document.getElementById("diss").innerHTML = "EXPIRED";
+								}
+						}, 1000);
+						</script>
 	</body>
 	
 </html>
