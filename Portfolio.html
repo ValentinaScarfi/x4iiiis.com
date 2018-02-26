@@ -2,6 +2,9 @@
 <html>
 	
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no"> 
+		
+
 		<title>x4iiiis' Portfolio</title>
 		<link href="main.css" rel="stylesheet" type="text/css"/>
 		
@@ -85,7 +88,9 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<div class="mobile-hide">
 	<a class="navbar-brand" href="Index.html"><img alt="x4iiiis" src="images/Logo/x4iiiis.png"></a>
+		</div>
       <ul class="nav navbar-nav navbar-right">
 		<li><a href="Index.html">Home</a></li>
 		<li><a href="About.html">About</a></li>
@@ -113,20 +118,39 @@
 		<br>
 		<center><h1>Welcome to the x4iiiis Project Hall of Fame</h1></center>
 
-		<p><center>
-			This place is pretty busy, but these buttons can help you find what you're looking for:
-		</p></center>
-	
-			<table style="width:100%;border:none">
-				<tr>
-					<th style="border:none"><input type="button" onclick="autoScrollTo('GlobalGameJam');" value="Global Game Jam" style="width:100%"/></th>
-					<th style="border:none"><input type="button" onclick="autoScrollTo('LudumDare');" value="Ludum Dare" style="width:100%"/></th>
-					<th style="border:none"><input type="button" onclick="autoScrollTo('UniversityWork');" value="University Work" style="width:100%"/></th>
-					<th style="border:none"><input type="button" onclick="autoScrollTo('PersonalProjects');" value="Personal Projects" style="width:100%"/></th>
-					<th style="border:none"><input type="button" onclick="autoScrollTo('Misc');" value="Miscellaneous" style="width:100%"/></th>
-				</tr>
-			</table>
+		<div id="DesktopNavButtons" class="mobile-hide">
+				<p><center>
+					This place is pretty busy, but these buttons can help you find what you're looking for:
+				</p></center>
+			
+					<table style="width:100%;border:none">
+						<tr>
+							<th style="border:none"><input type="button" onclick="autoScrollTo('GlobalGameJam');" value="Global Game Jam" style="width:100%"/></th>
+							<th style="border:none"><input type="button" onclick="autoScrollTo('LudumDare');" value="Ludum Dare" style="width:100%"/></th>
+							<th style="border:none"><input type="button" onclick="autoScrollTo('UniversityWork');" value="University Work" style="width:100%"/></th>
+							<th style="border:none"><input type="button" onclick="autoScrollTo('PersonalProjects');" value="Personal Projects" style="width:100%"/></th>
+							<th style="border:none"><input type="button" onclick="autoScrollTo('Misc');" value="Miscellaneous" style="width:100%"/></th>
+						</tr>
+					</table>
+				</div>
 
+				<div id="MobileNavButtons" class="mobile-show">
+						<p><center>
+							This place is pretty busy, but these buttons can help you find what you're looking for:
+						</p></center>
+					
+							<table style="width:100%;border:none">
+								<tr>
+									<th style="border:none"><button type="button" onclick="autoScrollTo('GlobalGameJam');" style="width:100%;height:80px"/>Global<br>Game<br>Jam</th>
+									<th style="border:none"><button type="button" onclick="autoScrollTo('LudumDare');" style="width:100%;height:80px"/>Ludum<br>Dare</th>
+									<th style="border:none"><button type="button" onclick="autoScrollTo('UniversityWork');" style="width:100%;height:80px"/>University<br>Work</th>
+									<th style="border:none"><button type="button" onclick="autoScrollTo('PersonalProjects');" style="width:100%;height:80px"/>Personal<br>Projects</th>
+									<th style="border:none"><button type="button" onclick="autoScrollTo('Misc');" style="width:100%;height:80px"/>Misc</th>
+								</tr>
+							</table>
+						</div>
+
+		
 
 			<br>
 

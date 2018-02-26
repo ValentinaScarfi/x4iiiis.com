@@ -2,6 +2,8 @@
 <html>
 	
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no"> 
+
 		<title>x4iiiis' CV</title>
 		<link href="main.css" rel="stylesheet" type="text/css"/>
 		
@@ -31,7 +33,9 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	<a class="navbar-brand" href="Index.html"><img alt="x4iiiis" src="images/Logo/x4iiiis.png"></a>
+		<div class="mobile-hide">
+			<a class="navbar-brand" href="Index.html"><img alt="x4iiiis" src="images/Logo/x4iiiis.png"></a>
+		</div>
       <ul class="nav navbar-nav navbar-right">
 		<li><a href="Index.html">Home</a></li>
 		<li><a href="About.html">About</a></li>
@@ -99,9 +103,28 @@
 
 
 		<h3>EMPLOYMENT EXPERIENCE</h3>
+		<div id="MostRecentJobs">
+			Scotmid Co-operative<span style="display:inline-block; width: 50px;"></span>Customer Service Assistant<span style="display:inline-block; width: 50px;"></span> October 2013-present 
+			<li>Stacking shelves</li>
+			<li>Handling deliveries</li>
+			<li>Dealing with customers</li>
 
-		Customer Service Assistant <span style="display:inline-block; width: 50px;"></span> Scotmid <span style="display:inline-block; width: 50px;"></span> October 2013-present 
-		<li>Sold shit I suppose?</li>
+			<br>
+		</div>
+
+		<button id="ToggleJobs" onclick="ToggleOlderJobs('OlderJobs', 'ToggleJobs');" style="width:120px">Show more</button>
+		<br><br>
+
+		<div id="OlderJobs" style="display:none">
+			Wee fud<span style="display:inline-block; width: 50px;"></span>Down the centre<span style="display:inline-block; width: 50px;"></span> Back in the day 
+			<li>Pushing fucked machines</li>
+			<li>Tolerating wains</li>
+			<li>Eating Greggs and McDonalds</li>
+		</div>
+
+
+
+
 
 		<h3>EDUCATION & TRAINING</h3>
 		
@@ -151,6 +174,27 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<!-- Show more/less jobs script -->
+		<script type="text/javascript">
+
+			function ToggleOlderJobs(div, button)
+			{
+				var OlderJobs = document.getElementById(div);
+				var Button = document.getElementById(button);
+
+				if(OlderJobs.style.display == 'none')
+				{
+					OlderJobs.style.display = 'block';
+					Button.innerHTML = "Show less"
+				}
+				else
+				{
+					OlderJobs.style.display = 'none'
+					Button.innerHTML = "Show more";
+				}
+			}
+		</script>
 	</body>
 	
 </html>

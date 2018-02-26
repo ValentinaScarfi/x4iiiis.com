@@ -2,6 +2,8 @@
 <html>
 	
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no"> 
+
 		<title>x4iiiis' Honours Project</title>
 		<link href="main.css" rel="stylesheet" type="text/css"/>
 		
@@ -83,7 +85,9 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	<a class="navbar-brand" href="Index.html"><img alt="x4iiiis" src="images/Logo/x4iiiis.png"></a>
+		<div class="mobile-hide">
+			<a class="navbar-brand" href="Index.html"><img alt="x4iiiis" src="images/Logo/x4iiiis.png"></a>
+		</div>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="Index.html">Home</a></li>
 		<li><a href="About.html">About</a></li>
@@ -382,10 +386,12 @@
 		
 		
 		<br><br>
-		<div id ="Playlist" class="contentbox">
-		<center><h3>NeuroSwitch YouTube Playlist</h3></center>
-		<!-- Embedding the playlist -->
-		<center><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLy7dHoWSR1i5sJ1h83-yW3nFbFgPIK_8x" frameborder="0" allowfullscreen></iframe></center>
+		<div class="video-container">
+			<div id ="Playlist" class="contentbox video">
+				<center><h3>NeuroSwitch YouTube Playlist</h3></center>
+					<!-- Embedding the playlist -->
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLy7dHoWSR1i5sJ1h83-yW3nFbFgPIK_8x" frameborder="0" allowfullscreen></iframe>
+			</div>
 		</div>
 		
 		
