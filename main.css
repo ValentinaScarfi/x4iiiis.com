@@ -3,7 +3,7 @@ body
 	margin: 0px;
 	padding-top: 95px;
 
-	background-color:aquamarine !important;		/*   !important to override Bootstrap   */
+	background-color:aquamarine; /*!important;		/*   !important to override Bootstrap   */
 }
 
 body .container
@@ -64,7 +64,7 @@ footer ul.row-1
 footer ul.row-2 li
 {
 	border-right: none;
-	padding: 0px 0px 0px 0px;
+	padding: 0px 11.5px 0px 11.5px;
 }
 
 footer ul.row-2 i
