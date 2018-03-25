@@ -155,7 +155,7 @@
 		</p>
 		<p><center>
 			For the visual aspects of the project, <a href="https://www.sfml-dev.org" target="_blank">SFML</a> was imported. 
-		</center></p>
+		</p>
 
 		<br>
 		<p>
@@ -166,9 +166,10 @@
 		<p> They come as part of a larger pack, but only the playing card textures were necessary for 
 			this project. 
 		</p>
+	</center>
 
-		<br>
-		<p>
+		<br><br><br>
+		<p class="justify">
 			Here is an in-game NeuroSwitch screenshot from the 22nd of December, 2017. 
 		</p>
 
@@ -179,37 +180,39 @@
 		<p>
 			<center>
 				<h5>Switch</h5>
-				Before we delve into the project, I should explain the rules of Switch.
+				<p class="justify">
+					Before we delve into the project, I should explain the rules of Switch.
+				</p>
 			</center>
 		</p>
-		<p>
+		<p class="justify">
 			Switch is a game that has a plethora of variants and probably has a few different
 			aliases too. However, 'Switch' was the name my friends and I used when we'd play the game
 			throughout our high-school years, and these are the rules with which we played:
 		</p>
-		<p>
+		<p class="justify">
 			Each player is dealt a set amount of cards (usually around 7, but can vary dependant on the
 			number of players), and the player to the left of the dealer starts after the card on the top 
 			of the pack has been turned over.
 		</p>
-		<p>
+		<p class="justify">
 			The player must now either match the suit of the upturned card, or its type.
 		</p> 
-		<p>
+		<p class="justify">
 			If the cards in their hand do not fit the criteria, then the player must pick up from the top of
 			the pack, and the player to their left begins their turn.
 		</p>
-		<p>
+		<p class="justify">
 			The aim of the game is to play all of your cards and get "out." 
 		</p>
-		<p>
+		<p class="justify">
 			The game can continue after someone has won; We used to play until last place had been decided
 			and the loser ridiculed.
 		</p>
-		<p>
+		<p class="justify">
 			As you might expect, it isn't quite as simple as that though. 
 		</p>
-		<p>
+		<p class="justify">
 			Certain cards have rules attached to them. There are varying permutations of these rules,
 			but I'm going to use the rules I'm accustomed to. 
 		</p>
@@ -273,7 +276,7 @@
 					<tr style="background-color:chartreuse">
 						<td>Jack</td>
 						<td>The direction of play is reversed</td>
-						<td></td>
+						<td style="background-color:salmon"></td>
 					</tr>
 				  </table>
 				</center>
@@ -290,7 +293,7 @@
 </center>
 		<br>
 
-		<p>
+		<p class="justify">
 			<ul><strong>Alterations:</strong>
 				<li>All rules that enforce a penalty on the next player are not available to be
 					countered in NeuroSwitch.
@@ -312,12 +315,12 @@
 
 		<center><h5>NeuroSwitch</h5></center>
 		
-		<p>
+		<p class="justify">
 			The next image shows console output from the end of a game, and the displaying of the 
 			scoreboard.
 		</p>
 		
-		<p>
+		<p class="justify">
 			Notice the column on the right showing the playstyle of each player, and in particular the 
 			hardcoded ones.
 
@@ -325,7 +328,7 @@
 			how they wish to compete in the game. The automatic players are more interesting however.
 		</p>
 		<h4>Aggressive</h4>
-		<p>
+		<p class="justify">
 			The aggressive playstyle is coded so that the first thing the player does, if it is able to play, 
 			is to check whether or not it has a black queen within its hand. If not, it will then check for 
 			a two, and failing that it will check for an eight. The aggressive playstyle will always play 
@@ -333,13 +336,13 @@
 			playable card in its hand if it has none that will do so.
 		</p>
 		<h4>Unaggressive</h4>
-		<p>
+		<p class="justify">
 			Unaggressive, as you might expect, does the exact opposite. Unaggressive attempts to avoid the 
 			power cards unless they are the only playable cards within their hand. This tends to yield poor 
 			results. 
 		</p>
 		<h4>Random</h4>
-		<p>
+		<p class="justify">
 			The previous two playstyles will just play the first playable card in their hand (if their 
 			attempted conditions are not met). Random does not. While it <em>does</em> use the same code 
 			and pick the first legally playable card in its hand, it gives the hand a good shuffle before 
@@ -347,45 +350,175 @@
 		</p>
 
 		<br>
-		<p>
+		<p class="justify">
 			These are almost like dummy players. The goal of the project is to implement an Artificial 
 			Neural Network that will learn how to play the game and improve over time, based on the results 
 			of a large quantity of games and generations.
 		</p>
-		<p>
+		<p class="justify">
 			For now, these allow me to play the game and test that there are no issues with the game. I 
 			need to know that the game itself is working properly before I start to implement artificial 
 			intelligence, as finding a bug at a later stage would render any data gathering that had been 
 			done to that point useless.
 		</p>
-		<p>
+		<p class="justify">
 			It can be fun to play against these automatic strategies too!
 		</p>
 		</div>
 
 		<br>
 
-		<p>
+		<p class="justify">
 			The results of each completed game are also being recorded in a text file. It shows much the 
 			same as the previous screenshot, but with the inclusion of the current date and time for more 
 			informative data to look back on.
 		</p>
-		<p>
+		<p class="justify">
 			This can be seen in the following screenshot. 
 		</p>
 		<p>
 			<center><img alt="Console Screenshot" src="images/honoursproject/screenshots/28.12.17-KeepingGameRecords.png" style="width:75%;height:75%;"></center>
 		</p>
 
+		<br><br><br>
+
+		<p class="justify">
+			To get a feel for how these hardcoded strategies performed, they were tested against one another. 
+			Below are a series of tables, showing the results of this testing. 
+		</p>
+
+			<table style="width:65%" class="float-img-left"> 
+				<tr>
+				  <th>Number of Games</th>
+				  <th>Aggressive Wins</th>
+				  <th>Unaggressive Wins</th>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td>552</td>
+					<td>448</td>
+				</tr>
+			  </table>
+
+			  <p class="justify">
+				  First up, Aggressive vs Unaggressive. As you can see, the aggressive playstyle edged it.
+				  I was taken aback by the closeness of the results however, given that the unaggressive
+				  playstyle actively avoids playing cards that will negatively affect the opposition (to the
+				  best of its ability). I suppose this is testiment to the stochastic nature of the game. 
+			  </p>
+			  <br>
+
+			  <table style="width:65%" class="float-img-right"> 
+				<tr>
+				  <th>Number of Games</th>
+				  <th>Aggressive Wins</th>
+				  <th>Random Wins</th>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td>501</td>
+					<td>499</td>
+				</tr>
+			  </table>
+
+			  <p class="justify">
+				  Next, Aggressive vs Random. This was even tighter! It's harder to dispute the likelihood of
+				  this one however, as there's no way of knowing what the random player is going to play. That 
+				  said, I'd still expect a strategy designed to attack the next player at any given opportunity
+				  to perform more strongly.
+			  </p>
+			  <br>
+
+			  <table style="width:65%" class="float-img-left"> 
+				<tr>
+				  <th>Number of Games</th>
+				  <th>Random Wins</th>
+				  <th>Unaggressive Wins</th>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td>539</td>
+					<td>461</td>
+				</tr>
+			  </table>
+			
+			<p class="justify">
+				Last up was Random vs Unaggressive. 
+			</p>
+
+			<br>
+			
+
+			<p class="justify">
+				I then decided to try all three playstyles together.
+			</p>
+
+			<table style="width:100%"> 
+				<tr>
+				  <th>Number of Games</th>
+				  <th>Aggressive Wins</th>
+				  <th>Unaggressive Wins</th>
+				  <th>Random Wins</th>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td>346</td>
+					<td>314</td>
+					<td>340</td>
+				</tr>
+			  </table>
+			</center>
+
+			<br><br>
+			
 
 
+		<p class="justify">
+			I started out by running one strategy against another, and then followed by having all three play games
+			together and see who came out on top.
+		</p>
+
+		<p class="justify">
+			As the tables show, the aggressive playstyle is the most successful. However, perhaps surprisingly, it
+			didn't have the convincing margin I'd anticipated.
+		</p>
+
+		<br>
+		<center>
+			<p>
+				The data from the above tables can be downloaded 
+				<a href="downloads/HardcodedData.zip" download>here</a>.
+			</p>
+		</center>
 		
 		
+		<br><br><br>
+
 		
+		<img alt="'It works' email" src="images/honoursproject/screenshots/ItWorksEmail.png" style="width:50%;height:50%;" class="float-img-left">
 		
+		<center><h1>Eurika! </h1></center>
 		
+		<p class="justify">
+			24/03/18 - Calum and Steven were unavailable for Fortnite duties and the rest, as they say,
+			is history.
+		</p>
+
+		<img alt="AcknowledgementsLel" src="images/honoursproject/screenshots/lel.png" style="width:50%;height:50%;">
 		
+		<br><br><br><br><br>
+		<br><br><br><br><br>
+		<br><br><br><br><br>
 		
+		<center>
+			<h3>NEATDOC:</h3>
+		<p>
+			I couldn't find the documentation/tutorial file that I'd used throughout the project, but I
+			still had it saved on my computer so I've uploaded it here. 
+		</p>
+			<a href="images/honoursproject/NEATDOC.pdf" download>
+			<input type="button" value="Download NEATDOC.pdf"/></a>
+		</center>
 		
 		
 		
