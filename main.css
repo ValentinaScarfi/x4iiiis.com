@@ -25,7 +25,7 @@ header
 	margin: 0px;
 	background: #333333;
 	color: white;
-	padding: 5px 0px 0px 15px;
+	padding: 5px 0px 0px 5px;
 }
 
 footer
@@ -108,6 +108,7 @@ header h1
 	color: #444;
 }
 
+/*
 nav ul
 {
 	margin: 0;
@@ -120,12 +121,13 @@ nav ul li
 	list-style-type: none;
 	display: inline-block;
 	padding: 3px 5px 3px 5px;  /* Change this for the nav links */
-}
+/*}
 
 nav ul li a
 {
 	color: blue;
 }
+*/
 
 .col
 {
@@ -157,18 +159,20 @@ footer
 
 @media screen and (min-width: 0px) and (max-width: 720px) {
 	.mobile-hide{ display: none !important; }
-	header .mobile-hide{ display: none !important; }
+	/*header .mobile-hide{ display: none !important; }
+	header .navbar-inverse.navbar-fixed-top .container-fluid .collapse.navbar-collapse .nav.navbar-nav.navbar-right .dropdown.mobile-hide{ display: none !important; }
 	header .dropdown.mobile-hide{ display: none !important;} 
-	.mobile-show{ display: block !important;}
-	header .dropdown.mobile-show{ display: block !important;}
+	.mobile-show{ display: inline-block !important;}
+	header .container-fluid .collapse.navbar-collapse .dropdown.mobile-show{ display: block !important;}*/
   }
 
   @media screen and (min-width: 721px) {
-	.mobile-hide{ display: block !important; }
+	/*.mobile-hide{ display: block !important; }
+	header .mobile-hide .dropdown{ display: inline-block !important; }
 	header .mobile-hide{ display: block !important; }
 	header .dropdown.mobile-hide{ display: block !important; }
 	.mobile-show{ display: none !important; }
-	header .dropdown.mobile-show{ display: none !important; }
+	header .dropdown.mobile-show{ display: none !important; } */
   }
 
   .video-container {
