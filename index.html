@@ -72,12 +72,15 @@
 		
 		<center>
 				<h1>Florida</h1>
-				<H2 id="essay" style="color:red"></H2>
+				<H2 id="Florida" style="color:red"></H2>
 				<br>
-				<h1>DISSERTATION</h1>
-				<h2 id="diss" style="color:red"></h2>
+				<h1>CI Exam</h1>
+				<h2 id="cie" style="color:red"></h2>
 				<br>
-				<h1>Comp Intel</h1>
+				<h1>ISS Exam</h1>
+				<h2 id="iss" style="color:red"></h2>
+				<br>
+				<h1>Comp Intel CW</h1>
 				<h2 id="ci" style="color:red"></h2>
 				<br>
 			</center>
@@ -154,19 +157,19 @@
 						var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 						
 						// Output the result in an element with id="demo"
-						document.getElementById("essay").innerHTML = days + "d " + hours + "h "
+						document.getElementById("Florida").innerHTML = days + "d " + hours + "h "
 						+ minutes + "m " + seconds + "s ";
 						
 						// If the count down is over, write some text 
 						if (distance < 0) {
 								clearInterval(x);
-								document.getElementById("essay").innerHTML = "EXPIRED";
+								document.getElementById("Florida").innerHTML = "EXPIRED";
 						}
 				}, 1000);
 				</script>
 				<script>
 						// Set the date we're counting down to
-						var countDownDate2 = new Date("Apr 11, 2018 17:00:00").getTime();
+						var countDownDate2 = new Date("Apr 27, 2018 09:30:00").getTime();
 						
 						// Update the count down every 1 second
 						var x2 = setInterval(function() {
@@ -184,13 +187,13 @@
 								var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
 								
 								// Output the result in an element with id="demo"
-								document.getElementById("diss").innerHTML = days2 + "d " + hours2 + "h "
+								document.getElementById("iss").innerHTML = days2 + "d " + hours2 + "h "
 								+ minutes2 + "m " + seconds2 + "s ";
 								
 								// If the count down is over, write some text 
 								if (distance2 < 0) {
 										clearInterval(x2);
-										document.getElementById("diss").innerHTML = "EXPIRED";
+										document.getElementById("iss").innerHTML = "EXPIRED";
 								}
 						}, 1000);
 						</script>
@@ -224,6 +227,36 @@
 								}
 						}, 1000);
 						</script>
+						<script>
+							// Set the date we're counting down to
+							var countDownDate4 = new Date("May 01, 2018 09:30:00").getTime();
+							
+							// Update the count down every 1 second
+							var x4 = setInterval(function() {
+							
+									// Get todays date and time
+									var now4 = new Date().getTime();
+									
+									// Find the distance between now an the count down date
+									var distance4 = countDownDate4 - now4;
+									
+									// Time calculations for days, hours, minutes and seconds
+									var days4 = Math.floor(distance4 / (1000 * 60 * 60 * 24));
+									var hours4 = Math.floor((distance4 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+									var minutes4 = Math.floor((distance4 % (1000 * 60 * 60)) / (1000 * 60));
+									var seconds4 = Math.floor((distance4 % (1000 * 60)) / 1000);
+									
+									// Output the result in an element with id="demo"
+									document.getElementById("cie").innerHTML = days4 + "d " + hours4 + "h "
+									+ minutes4 + "m " + seconds4 + "s ";
+									
+									// If the count down is over, write some text 
+									if (distance4 < 0) {
+											clearInterval(x4);
+											document.getElementById("cie").innerHTML = "EXPIRED";
+									}
+							}, 1000);
+							</script>
 
 				
 				
